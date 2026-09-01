@@ -95,6 +95,18 @@ h1 {
 
 }
 
+a {
+
+    text-decoration: none;
+
+}
+
+ul {
+
+    list-style: none;
+    
+}
+
 
 .lista-container {
 
@@ -733,7 +745,22 @@ legend {
     width: 100%;
     cursor: pointer;
     text-align: left;
+    background: transparent;
+    border: none;
+    font-size: 14px;
+    color: var(--preto);
+    font-weight: bold;
 
+}
+
+.proxima-pergunta {
+
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--cinza);
+    
 }
 
 .pergunta {
