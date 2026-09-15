@@ -89,6 +89,18 @@
 
     }
 
+    .h3-row-2, .h3-row-3, .h3-row-4, .h3-row-5, .h3-row-6, .h3-row-7 {
+
+        font-size: x-large !important;
+
+    }
+
+    .p-row-2, .p-row-3, .p-row-4, .p-row-5, .p-row-6, .p-row-7 {
+
+        font-size: medium !important;
+
+    }
+
     .h2-top {
 
         font-size: x-large !important;
@@ -168,7 +180,7 @@
 
     .body-row-5-div-col-2 {
 
-        font-size: x-small !important;
+        font-size: xx-small !important;
 
     }
 
@@ -500,8 +512,67 @@
 
 /*  TABLETS */
 
-@media screen and (min-width: 768px) and (max-width: 992px) {
+@media screen and (min-width: 769px) and (max-width: 992px) {
     
+    .lista-container {
+
+        gap: 5px !important;
+
+    }
+
+    .link-header {
+
+        font-size: 10px !important;
+
+    }
+
+    .card-justificativa {
+
+        max-width: 300px !important;
+
+    }
+
+    .body-row-5-div-col-2 {
+
+        font-size: 10px !important;
+
+    }
+
+    .container-body-row-7 {
+
+        max-width: unset !important;
+
+    }
+
+    .legend-footer {
+
+        color: var(--branco) !important;
+        max-width: 25vw !important;
+
+    }
+
+    .copy {
+
+        padding: 20px;
+
+    }
+
+    .a-footer {
+
+        color: var(--branco) !important;
+
+    }
+
+    .a-footer::before {
+
+        content: "\f25a";
+        font-family: "Font Awesome 6 Free";
+        font-weight: 500;
+        margin-right: 8px;
+        color: var(--verde);
+
+
+    }
 
 }
 
@@ -652,7 +723,7 @@ main {
 
 .body-row-1, .body-row-3, .body-row-4, .body-row-5, .body-row-6, .body-row-7, footer {
 
-    padding: 80px 0px;
+    padding: 80px 10px;
 
 }
 
@@ -836,7 +907,6 @@ legend {
 
 .container-card-votacao, .container-card-cargos, .container-card-justificativa {
 
-    width: 100vw;
     margin: auto;
     margin-top: 30px;
     display: inline-flex;
@@ -844,13 +914,13 @@ legend {
     flex-wrap: wrap;
     align-items: center;
     gap: 20px;
+    width: 100%;
 
 }
 
 .container-card-cargos {
 
     display: flex;
-    width: 65vw;
 
 }
 
@@ -1173,7 +1243,6 @@ legend {
 
     display: flex;
     background: linear-gradient(135deg, var(--azul-claro) 0%, var(--verde) 100%);
-    width: 50vw;
     padding: 40px;
     border-radius: 8px;
     margin-top: 20px;
@@ -1339,7 +1408,6 @@ span {
     flex-direction: column;
     gap: 10px;
     margin: auto;
-    max-width: 50vw;
     margin-top: 30px;
 
 }
@@ -1386,8 +1454,9 @@ span {
 
 .legend-footer {
 
-    max-width: 15vw;
+    max-width: 25vw;
     font-size: medium;
+    color: var(--branco);
 
 }
 
@@ -1424,7 +1493,7 @@ footer {
 
 .a-footer {
 
-    color: var(--cinza);
+    color: var(--branco);
     font-size: medium;
 
 }
@@ -1449,6 +1518,8 @@ footer {
     margin: auto;
     margin-top: 30px;
     font-family: var(--fontheadings);
+    padding: 20px;
+    gap: 20px;
 
 }
 
