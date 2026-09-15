@@ -16,7 +16,12 @@
             <h1>Primeiro<strong class="voto">Voto</strong></h1>
         </div>
         <div class="header-col-2">
-            <nav>
+            <nav class="nav-header">
+                <div class="menuhamburguer">
+                    <div class="linha-hamburguer"></div>
+                    <div class="linha-hamburguer"></div>
+                    <div class="linha-hamburguer"></div>
+                </div>
                 <ul class="lista-container">
                     <li><a href="#inicio" class="link-header">Início</a></li>
                     <li><a href="#comovotar" class="link-header">Como Votar</a></li>
@@ -29,6 +34,15 @@
             </nav>
         </div>
     </header>
+    <ul class="lista-mobile">
+        <li><a href="#inicio" class="link-header">Inicio</a></li>
+        <li><a href="#comovotar" class="link-header">Como votar</a></li>
+        <li><a href="#cargos" class="link-header">Cargos</a></li>
+        <li><a href="#justificativa" class="link-header">Justificativa</a></li>
+        <li><a href="#localdevotacao" class="link-header">Local</a></li>
+        <li><a href="#faq" class="link-header">FAQ</a></li>
+        <li><a href="#quiz" class="link-header">Fazer Quiz</a></li>
+    </ul>
     <main>
         <div id="inicio" class="body-row-1">
             <div class="body-col-1">
@@ -37,7 +51,7 @@
                     <h2 class="h2-top">Seu Primeiro Voto <br> <strong class="comecaaqui">Começa Aqui</strong></h3>
                 </div>
                 <div class="paragrafo">
-                    <p class="p-body">Tudo o que você precisa saber para votar com <br> confiança pela primeira vez. Simples, rápido e <br> completo.</p>
+                    <p class="p-body">Tudo o que você precisa saber para votar com <br class="br-paragrafo"> confiança pela primeira vez. Simples, rápido e <br class="br-paragrafo"> completo.</p>
                 </div>
                 <div class="buttons">
                     <button class="button-body" style="border: 2px solid var(--azul-escuro)"><a href="#comovotar" class="button-comecar">Começar</a></button>
@@ -46,15 +60,15 @@
                 <div class="legenda">
                     <div>
                         <p class="p-legenda">16+</p>
-                        <legend>Voto facultativo</legend>
+                        <legend class="legend-body">Voto facultativo</legend>
                     </div>
                     <div>
                         <p class="p-legenda">18+</p>
-                        <legend>Voto obrigatório</legend>
+                        <legend class="legend-body">Voto obrigatório</legend>
                     </div>
                     <div>
                         <p class="p-legenda">100%</p>
-                        <legend>Gratuito</legend>
+                        <legend class="legend-body">Gratuito</legend>
                     </div>
                 </div>
             </div>
@@ -505,6 +519,29 @@
 <script>
 
     const perguntas = document.querySelectorAll(".pergunta");
+    const menuHamburguer = document.querySelector('.menuhamburguer');
+    const listaMenu = document.querySelector('.lista-mobile');
+
+    menuHamburguer.addEventListener("click", function(event) {
+        event.stopPropagation();
+
+        menuHamburguer.classList.toggle("inativo");
+        listaMenu.classList.toggle("ativo");
+    });
+
+    listaMenu.querySelectorAll("a").forEach(function(link) {
+        link.addEventListener("click", function() {
+            listaMenu.classList.remove("ativo");
+            menuHamburguer.classList.remove("inativo");
+        });
+    });
+
+    document.addEventListener("click", function(event) {
+        if (!listaMenu.contains(event.target) && !menuHamburguer.contains(event.target)) {
+            listaMenu.classList.remove("ativo");
+            menuHamburguer.classList.remove("inativo");
+        }
+    });
 
 perguntas.forEach(function(pergunta) {
 
